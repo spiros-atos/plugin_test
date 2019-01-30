@@ -1,0 +1,13 @@
+plugins:
+  spiros:
+    executor: central_deployment_agent
+    source: ./plugin_master
+    package_name: cloudify-spiros-plugin
+
+node_types:
+  spiros.Example:
+    derived_from: cloudify.nodes.Root
+    interfaces:
+      cloudify.interfaces.lifecycle:
+        start:
+          implementation: spiros.plugin_master.tasks.example
