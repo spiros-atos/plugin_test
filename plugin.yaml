@@ -1,7 +1,7 @@
 plugins:
   spiros:
     executor: central_deployment_agent
-    source: ./plugin_master
+    source: https://github.com/spiros-atos/plugin_test/archive/master.zip
     package_name: cloudify-spiros-plugin
 
 node_types:
